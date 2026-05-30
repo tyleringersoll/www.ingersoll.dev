@@ -421,6 +421,19 @@ a[target="_blank"]:not(:where(
   border-bottom: 1px solid var(--border);
 }
 
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero h1 {
   font-size: clamp(2.4rem, 5.5vw, 3.8rem);
   letter-spacing: -0.01em;
@@ -499,6 +512,11 @@ a[target="_blank"]:not(:where(
 }
 .section--alt {
   background-color: var(--bg-primary);
+}
+
+@media (max-width: 860px) {
+  .hero__inner  { grid-template-columns: 1fr; }
+  .hero__visual { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -648,6 +666,7 @@ a[target="_blank"]:not(:where(
 
 .site-card {
   display: block;
+  height: 100%;
   padding: 1.35rem 1.5rem;
   background-color: var(--bg-surface);
   border: 1px solid var(--border);

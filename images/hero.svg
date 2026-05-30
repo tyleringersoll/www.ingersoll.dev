@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 480" fill="none" aria-hidden="true">
+  <defs>
+
+    <filter id="wave-glow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="tip-glow" x="-200%" y="-200%" width="500%" height="500%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="head-clip">
+      <circle cx="220" cy="280" r="124"/>
+    </clipPath>
+
+    <radialGradient id="head-grad" cx="42%" cy="42%" r="58%">
+      <stop offset="0%" stop-color="#222c35"/>
+      <stop offset="100%" stop-color="#0d1014"/>
+    </radialGradient>
+
+    <radialGradient id="ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00b7ff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#00b7ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="tip-1-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00b7ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00b7ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="tip-2-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00b7ff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#00b7ff" stop-opacity="0"/>
+    </radialGradient>
+
+  </defs>
+
+  <!-- Ambient glow behind drum -->
+  <circle cx="220" cy="280" r="165" fill="url(#ambient)"/>
+
+  <!-- ── Drum ─────────────────────────────────────────────────────────── -->
+
+  <!-- Outer shell -->
+  <circle cx="220" cy="280" r="142" fill="#0d1014" stroke="#4f5b66" stroke-width="1.5"/>
+
+  <!-- Rim (thick band) -->
+  <circle cx="220" cy="280" r="131" fill="none" stroke="#65737e" stroke-width="7"/>
+
+  <!-- Drum head -->
+  <circle cx="220" cy="280" r="124" fill="url(#head-grad)"/>
+  <circle cx="220" cy="280" r="124" fill="none" stroke="#4f5b66" stroke-width="0.75"/>
+
+  <!-- Subtle resonance ring inside head -->
+  <circle cx="220" cy="280" r="88"  fill="none" stroke="#1f272d" stroke-width="1" opacity="0.6"/>
+
+  <!-- ── Tension lugs (8 positions) ────────────────────────────────────── -->
+  <!-- top -->
+  <line x1="220" y1="127" x2="220" y2="140" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="220" cy="123" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="220" cy="123" r="2" fill="#1f272d"/>
+
+  <!-- top-right -->
+  <line x1="321" y1="172" x2="312" y2="181" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="325" cy="168" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="325" cy="168" r="2" fill="#1f272d"/>
+
+  <!-- right -->
+  <line x1="362" y1="280" x2="374" y2="280" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="378" cy="280" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="378" cy="280" r="2" fill="#1f272d"/>
+
+  <!-- bottom-right -->
+  <line x1="321" y1="388" x2="312" y2="379" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="325" cy="392" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="325" cy="392" r="2" fill="#1f272d"/>
+
+  <!-- bottom -->
+  <line x1="220" y1="433" x2="220" y2="420" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="220" cy="437" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="220" cy="437" r="2" fill="#1f272d"/>
+
+  <!-- bottom-left -->
+  <line x1="119" y1="388" x2="128" y2="379" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="115" cy="392" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="115" cy="392" r="2" fill="#1f272d"/>
+
+  <!-- left -->
+  <line x1="78"  y1="280" x2="66"  y2="280" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="62"  cy="280" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="62"  cy="280" r="2" fill="#1f272d"/>
+
+  <!-- top-left -->
+  <line x1="119" y1="172" x2="128" y2="181" stroke="#4f5b66" stroke-width="2"/>
+  <circle cx="115" cy="168" r="5" fill="#343d46" stroke="#65737e" stroke-width="1.5"/>
+  <circle cx="115" cy="168" r="2" fill="#1f272d"/>
+
+  <!-- ── Waveform (clipped to drum head) ────────────────────────────────── -->
+  <g clip-path="url(#head-clip)">
+    <!-- Faint baseline -->
+    <line x1="96" y1="280" x2="344" y2="280" stroke="#4f5b66" stroke-width="0.5" opacity="0.35"/>
+
+    <!-- Glow pass -->
+    <path
+      d="M 96,280 C 106,245 130,245 138,280 S 166,315 180,280 S 208,245 222,280 S 250,315 264,280 S 292,245 306,280 S 334,315 344,280"
+      stroke="#00b7ff" stroke-width="5" stroke-linecap="round" fill="none"
+      opacity="0.25" filter="url(#wave-glow)"
+    />
+
+    <!-- Crisp pass -->
+    <path
+      d="M 96,280 C 106,245 130,245 138,280 S 166,315 180,280 S 208,245 222,280 S 250,315 264,280 S 292,245 306,280 S 334,315 344,280"
+      stroke="#00b7ff" stroke-width="2" stroke-linecap="round" fill="none"
+    />
+  </g>
+
+  <!-- ── Drumsticks ─────────────────────────────────────────────────────── -->
+
+  <!-- Stick 1 (upper-left → drum): (50,28) → (252,162) -->
+  <line x1="50"  y1="28"  x2="255" y2="165" stroke="#0a0704" stroke-width="11" stroke-linecap="round" opacity="0.7"/>
+  <line x1="50"  y1="28"  x2="253" y2="163" stroke="#7a5018" stroke-width="8"  stroke-linecap="round"/>
+  <line x1="50"  y1="28"  x2="252" y2="162" stroke="#c8922a" stroke-width="3"  stroke-linecap="round" opacity="0.8"/>
+  <line x1="52"  y1="30"  x2="180" y2="113" stroke="#e8c870" stroke-width="1"  stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Stick 2 (upper-right → drum): (390,28) → (193,165) -->
+  <line x1="390" y1="28"  x2="190" y2="168" stroke="#0a0704" stroke-width="11" stroke-linecap="round" opacity="0.7"/>
+  <line x1="390" y1="28"  x2="191" y2="166" stroke="#7a5018" stroke-width="8"  stroke-linecap="round"/>
+  <line x1="390" y1="28"  x2="192" y2="165" stroke="#c8922a" stroke-width="3"  stroke-linecap="round" opacity="0.8"/>
+  <line x1="388" y1="30"  x2="260" y2="115" stroke="#e8c870" stroke-width="1"  stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Tip impact glows -->
+  <circle cx="252" cy="162" r="14" fill="url(#tip-1-glow)" filter="url(#tip-glow)" opacity="0.6"/>
+  <circle cx="193" cy="165" r="14" fill="url(#tip-2-glow)" filter="url(#tip-glow)" opacity="0.6"/>
+
+  <!-- Tip beads -->
+  <circle cx="252" cy="162" r="5"   fill="#5c3408" stroke="#c8922a" stroke-width="1.5"/>
+  <circle cx="252" cy="162" r="2.5" fill="#f0d080"/>
+  <circle cx="193" cy="165" r="5"   fill="#5c3408" stroke="#c8922a" stroke-width="1.5"/>
+  <circle cx="193" cy="165" r="2.5" fill="#f0d080"/>
+
+  <!-- ── Floating code fragments ────────────────────────────────────────── -->
+
+  <!-- Upper-left -->
+  <text x="18" y="158" font-family="'Courier New', Courier, monospace" font-size="11" fill="#4f5b66">const beat</text>
+  <text x="18" y="173" font-family="'Courier New', Courier, monospace" font-size="11" fill="#4f5b66">  = () => {</text>
+  <text x="18" y="188" font-family="'Courier New', Courier, monospace" font-size="11" fill="#343d46">  // 120 bpm</text>
+
+  <!-- Upper-right -->
+  <text x="306" y="120" font-family="'Courier New', Courier, monospace" font-size="11" fill="#4f5b66">tempo: 120,</text>
+  <text x="306" y="135" font-family="'Courier New', Courier, monospace" font-size="11" fill="#4f5b66">time: '4/4'</text>
+  <text x="306" y="150" font-family="'Courier New', Courier, monospace" font-size="11" fill="#343d46">kit: 'DW 9000'</text>
+
+  <!-- Lower-left abstract lines -->
+  <line x1="18" y1="382" x2="62"  y2="382" stroke="#343d46" stroke-width="2" stroke-linecap="round"/>
+  <line x1="18" y1="393" x2="48"  y2="393" stroke="#2a3540" stroke-width="2" stroke-linecap="round"/>
+  <line x1="18" y1="404" x2="55"  y2="404" stroke="#343d46" stroke-width="2" stroke-linecap="round"/>
+  <line x1="18" y1="415" x2="40"  y2="415" stroke="#2a3540" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Lower-right abstract lines -->
+  <line x1="360" y1="382" x2="420" y2="382" stroke="#343d46" stroke-width="2" stroke-linecap="round"/>
+  <line x1="370" y1="393" x2="420" y2="393" stroke="#2a3540" stroke-width="2" stroke-linecap="round"/>
+  <line x1="364" y1="404" x2="420" y2="404" stroke="#343d46" stroke-width="2" stroke-linecap="round"/>
+  <line x1="374" y1="415" x2="420" y2="415" stroke="#2a3540" stroke-width="2" stroke-linecap="round"/>
+
+</svg>
