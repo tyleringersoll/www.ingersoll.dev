@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ingersoll.dev | Projects by Tyler Ingersoll</title>
+  <meta name="description" content="Browser-native frontend experiments, performance-focused builds, and optimized utilities by Tyler Ingersoll." />
+  <link rel="canonical" href="https://ingersoll.dev" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ingersoll.dev" />
+  <meta property="og:title" content="ingersoll.dev | Projects by Tyler Ingersoll" />
+  <meta property="og:description" content="Browser-native frontend experiments, performance-focused builds, and optimized utilities by Tyler Ingersoll." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Header ──────────────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" class="site-header__brand" aria-label="ingersoll.dev — home">ingersoll.dev</a>
+
+      <!-- Desktop nav -->
+      <nav class="site-header__nav" aria-label="Main navigation">
+        <ul class="site-header__nav-list">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#sites">Sites</a></li>
+          <li>
+            <a href="https://tyleringersoll.com" target="_blank" rel="noopener noreferrer">Main Site</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile nav: hamburger button + slide-out panel -->
+      <div class="mnav">
+        <button
+          id="mnav-btn"
+          class="mnav__btn"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mnav-panel"
+        >
+          <span class="mnav__box">
+            <span class="mnav__inner"></span>
+          </span>
+        </button>
+
+        <!-- Full-screen backdrop + panel -->
+        <div id="mnav-overlay" class="mnav__overlay" aria-hidden="true">
+          <div
+            id="mnav-panel"
+            class="mnav__panel"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Navigation menu"
+            tabindex="-1"
+          >
+            <div class="mnav__panel-header">
+              <span class="mnav__title">Menu</span>
+              <button
+                id="mnav-close"
+                class="mnav__close"
+                type="button"
+                aria-label="Close navigation menu"
+              >
+                <span class="mnav__close-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <ul class="mnav__items">
+              <li class="mnav__item"><a href="#projects">Projects</a></li>
+              <li class="mnav__item"><a href="#sites">Sites</a></li>
+              <li class="mnav__item">
+                <a href="https://tyleringersoll.com" target="_blank" rel="noopener noreferrer">Main Site</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ──────────────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow" aria-hidden="true">ingersoll.dev</p>
+        <h1>Performance-first browser experiments and highly optimized frontend builds.</h1>
+        <p class="hero__body">
+          A focused directory for frontend work built on native browser capabilities,
+          lean dependency trees, and a bias toward measurable performance over framework overhead.
+        </p>
+        <p class="hero__body hero__body--secondary">
+          For frontend architecture breakdowns, enterprise engineering history, and music background, visit
+          <a href="https://tyleringersoll.com" target="_blank" rel="noopener noreferrer">tyleringersoll.com</a>.
+        </p>
+        <div class="hero__cta-wrap">
+          <a href="#projects" class="btn btn--primary">View projects</a>
+          <a href="https://tyleringersoll.com" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Main site</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Projects ──────────────────────────────────────────────────── -->
+    <section class="section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="section-label">Projects</h2>
+        <div class="card-grid">
+
+          <article class="project-card">
+            <div class="project-card__header">
+              <div class="project-card__title-row">
+                <h3 class="project-card__title">Letterlock</h3>
+                <span class="status-badge status-badge--live" role="status">Live</span>
+              </div>
+              <ul class="project-card__tags" aria-label="Tags">
+                <li class="tag">Vue 3</li>
+                <li class="tag">Keyboard API</li>
+                <li class="tag">localStorage</li>
+                <li class="tag">A11Y-First</li>
+              </ul>
+            </div>
+            <p class="project-card__desc">
+              A six-letter word puzzle built under strict engineering constraints: native keyboard
+              event handling, full keyboard accessibility with ARIA live region announcements,
+              localStorage-backed game state, and no external UI library dependencies. Vue 3 and Vite only.
+            </p>
+            <div class="project-card__links">
+              <a
+                href="https://letterlock.ingersoll.dev"
+                class="project-link project-link--primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Play</a>
+              <a
+                href="#"
+                class="project-link project-link--ghost"
+                aria-label="Source code (not yet available)"
+                aria-disabled="true"
+              >Code</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--placeholder">
+            <div class="project-card__header">
+              <div class="project-card__title-row">
+                <h3 class="project-card__title">Upcoming builds</h3>
+                <span class="status-badge" role="status">Planned</span>
+              </div>
+            </div>
+            <p class="project-card__desc">
+              Frontend utilities, browser performance experiments, and architectural
+              prototypes—published when they have something worth documenting.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Sites ─────────────────────────────────────────────────────── -->
+    <section class="section section--alt" id="sites" aria-labelledby="sites-heading">
+      <div class="container">
+        <h2 id="sites-heading" class="section-label">Sites</h2>
+        <ul class="site-cards" role="list">
+
+          <li>
+            <a
+              href="https://tyleringersoll.com"
+              class="site-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p class="site-card__domain">tyleringersoll.com</p>
+              <p class="site-card__desc">
+                Frontend architecture deep-dives, enterprise engineering leadership,
+                full work history, performance breakdowns, and a three-decade musical background.
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://tyleringersolldrums.com"
+              class="site-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p class="site-card__domain">tyleringersolldrums.com</p>
+              <p class="site-card__desc">
+                Remote session work, hybrid acoustic-digital tracking configurations,
+                multi-decade performance credits, and current booking details.
+              </p>
+            </a>
+          </li>
+
+          <li>
+            <div class="site-card site-card--current" aria-current="page">
+              <p class="site-card__domain">ingersoll.dev</p>
+              <p class="site-card__desc">
+                Native browser experiments, performance-focused builds, and zero-overhead frontend utilities.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">&copy; <span id="year"></span> Tyler Ingersoll</p>
+      <p class="site-footer__links">
+        <a href="https://tyleringersoll.com" target="_blank" rel="noopener noreferrer">tyleringersoll.com</a>
+        <span aria-hidden="true">&middot;</span>
+        <a href="https://github.com/tyleringersoll" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Footer year ─────────────────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Scroll padding (keeps anchor targets clear of sticky header) ─────
+    var header = document.querySelector('.site-header');
+    function syncScrollPadding() {
+      document.documentElement.style.scrollPaddingTop = header.offsetHeight + 'px';
+    }
+    syncScrollPadding();
+    window.addEventListener('resize', syncScrollPadding);
+
+    // ── Mobile nav ──────────────────────────────────────────────────────
+    (function () {
+      const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+      const mnav     = document.querySelector('.mnav');
+      const btn      = document.getElementById('mnav-btn');
+      const overlay  = document.getElementById('mnav-overlay');
+      const panel    = document.getElementById('mnav-panel');
+      const closeBtn = document.getElementById('mnav-close');
+
+      let isOpen = false;
+
+      function getFocusable() {
+        return Array.from(panel.querySelectorAll(FOCUSABLE)).filter(function (el) {
+          var s = getComputedStyle(el);
+          return s.display !== 'none' && s.visibility !== 'hidden' && el.getClientRects().length > 0;
+        });
+      }
+
+      function open() {
+        isOpen = true;
+        mnav.classList.add('mnav--open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.setAttribute('aria-label', 'Close navigation menu');
+        overlay.removeAttribute('aria-hidden');
+        document.body.classList.add('menu-open');
+        // Focus first focusable item once the panel has slid in
+        requestAnimationFrame(function () {
+          setTimeout(function () {
+            var first = getFocusable()[0];
+            (first || panel).focus({ preventScroll: true });
+          }, 0);
+        });
+      }
+
+      function close(restoreFocus) {
+        if (restoreFocus === undefined) restoreFocus = true;
+        isOpen = false;
+        mnav.classList.remove('mnav--open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open navigation menu');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('menu-open');
+        if (restoreFocus) {
+          requestAnimationFrame(function () {
+            setTimeout(function () { btn.focus({ preventScroll: true }); }, 0);
+          });
+        }
+      }
+
+      // Toggle on hamburger click
+      btn.addEventListener('click', function () { isOpen ? close() : open(); });
+
+      // Close button inside panel
+      closeBtn.addEventListener('click', function () { close(); });
+
+      // Tap outside (on the backdrop) closes
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) close();
+      });
+
+      // Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && isOpen) close();
+      });
+
+      // Focus trap inside panel
+      panel.addEventListener('keydown', function (e) {
+        if (e.key !== 'Tab' || !isOpen) return;
+        var items = getFocusable();
+        if (!items.length) {
+          e.preventDefault();
+          panel.focus({ preventScroll: true });
+          return;
+        }
+        var first = items[0];
+        var last  = items[items.length - 1];
+        if (document.activeElement === panel) {
+          e.preventDefault();
+          (e.shiftKey ? last : first).focus();
+          return;
+        }
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      });
+
+      // Close on nav link click (anchor scroll)
+      panel.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () { close(false); });
+      });
+
+      // Close when viewport expands to desktop
+      window.matchMedia('(min-width: 641px)').addEventListener('change', function (e) {
+        if (e.matches && isOpen) close(false);
+      });
+    }());
+  </script>
+
+</body>
+</html>
