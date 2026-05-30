@@ -28,6 +28,6 @@ Shares the color palette and typography of [tyleringersoll.com](https://tylering
 
 ## Related
 
-- [tyleringersoll.com](https://tyleringersoll.com) — frontend architecture, engineering leadership, and music history
+- [tyleringersoll.com](https://tyleringersoll.com) — frontend architecture, engineering resume, and music history
 - [tyleringersolldrums.com](https://tyleringersolldrums.com) — remote session work, hybrid tracking configurations, and performance credits
-- [letterlock.ingersoll.dev](https://letterlock.ingersoll.dev) — first published project
+- [letterlock.ingersoll.dev](https://letterlock.ingersoll.dev) — word game project
