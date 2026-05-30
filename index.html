@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ingersoll.dev | Projects by Tyler Ingersoll</title>
-  <meta name="description" content="Browser-native frontend experiments, performance-focused builds, and optimized utilities by Tyler Ingersoll." />
+  <meta name="description" content="Small frontend projects and browser-based utilities by Tyler Ingersoll." />
   <link rel="canonical" href="https://ingersoll.dev" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://ingersoll.dev" />
   <meta property="og:title" content="ingersoll.dev | Projects by Tyler Ingersoll" />
-  <meta property="og:description" content="Browser-native frontend experiments, performance-focused builds, and optimized utilities by Tyler Ingersoll." />
+  <meta property="og:description" content="Small frontend projects and browser-based utilities by Tyler Ingersoll." />
   <meta property="og:image" content="https://ingersoll.dev/images/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -20,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ingersoll.dev | Projects by Tyler Ingersoll" />
-  <meta name="twitter:description" content="Browser-native frontend experiments, performance-focused builds, and optimized utilities by Tyler Ingersoll." />
+  <meta name="twitter:description" content="Small frontend projects and browser-based utilities by Tyler Ingersoll." />
   <meta name="twitter:image" content="https://ingersoll.dev/images/og-image.png" />
 
   <!-- Favicons -->
@@ -33,17 +34,18 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 
   <!-- Google Analytics 4 (G-562BHJD00Q) — deferred via requestIdleCallback to avoid blocking initial paint -->
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-562BHJD00Q');
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+    (window.requestIdleCallback || function (cb) { setTimeout(cb, 1); })(function () {
       var s = document.createElement('script');
       s.async = true;
       s.src = 'https://www.googletagmanager.com/gtag/js?id=G-562BHJD00Q';
@@ -51,6 +53,7 @@
     });
   </script>
 </head>
+
 <body>
 
   <!-- ── Header ──────────────────────────────────────────────────────── -->
@@ -71,14 +74,8 @@
 
       <!-- Mobile nav: hamburger button + slide-out panel -->
       <div class="mnav">
-        <button
-          id="mnav-btn"
-          class="mnav__btn"
-          type="button"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-          aria-controls="mnav-panel"
-        >
+        <button id="mnav-btn" class="mnav__btn" type="button" aria-label="Open navigation menu" aria-expanded="false"
+          aria-controls="mnav-panel">
           <span class="mnav__box">
             <span class="mnav__inner"></span>
           </span>
@@ -86,22 +83,11 @@
 
         <!-- Full-screen backdrop + panel -->
         <div id="mnav-overlay" class="mnav__overlay" aria-hidden="true">
-          <div
-            id="mnav-panel"
-            class="mnav__panel"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Navigation menu"
-            tabindex="-1"
-          >
+          <div id="mnav-panel" class="mnav__panel" role="dialog" aria-modal="true" aria-label="Navigation menu"
+            tabindex="-1">
             <div class="mnav__panel-header">
               <span class="mnav__title">Menu</span>
-              <button
-                id="mnav-close"
-                class="mnav__close"
-                type="button"
-                aria-label="Close navigation menu"
-              >
+              <button id="mnav-close" class="mnav__close" type="button" aria-label="Close navigation menu">
                 <span class="mnav__close-icon" aria-hidden="true"></span>
               </button>
             </div>
@@ -125,18 +111,21 @@
     <section class="hero">
       <div class="container">
         <p class="eyebrow" aria-hidden="true">ingersoll.dev</p>
-        <h1>Performance-first browser experiments and highly optimized frontend builds.</h1>
+        <h1>A directory of standalone frontend applications and web utilities.</h1>
         <p class="hero__body">
-          A focused directory for frontend work built on native browser capabilities,
-          lean dependency trees, and a bias toward measurable performance over framework overhead.
+          This index page is built with plain HTML and CSS. The projects listed here are small frontend applications and
+          utilities I built for personal use, practice, or experimentation. Some use Vue 3 and Vite. Others stay closer
+          to native browser APIs or use libraries that fit the task.
         </p>
         <p class="hero__body hero__body--secondary">
-          For frontend architecture breakdowns, enterprise engineering history, and music background, visit
+          My main site has frontend engineering notes, architecture notes, resume history, and music background. You can
+          find it at
           <a href="https://tyleringersoll.com" target="_blank" rel="noopener noreferrer">tyleringersoll.com</a>.
         </p>
         <div class="hero__cta-wrap">
           <a href="#projects" class="btn btn--primary">View projects</a>
-          <a href="https://tyleringersoll.com" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Main site</a>
+          <a href="https://tyleringersoll.com" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Main
+            site</a>
         </div>
       </div>
     </section>
@@ -157,27 +146,19 @@
                 <li class="tag">Vue 3</li>
                 <li class="tag">Keyboard API</li>
                 <li class="tag">localStorage</li>
-                <li class="tag">A11Y-First</li>
+                <li class="tag">Accessibility</li>
               </ul>
             </div>
             <p class="project-card__desc">
-              A six-letter word puzzle built under strict engineering constraints: native keyboard
-              event handling, full keyboard accessibility with ARIA live region announcements,
-              localStorage-backed game state, and no external UI library dependencies. Vue 3 and Vite only.
+              A browser-based word puzzle built with Vue 3 and Vite. It uses native keyboard event listeners, ARIA live
+              region announcements, and localStorage for saved game state. It does not use an external UI component
+              library.
             </p>
             <div class="project-card__links">
-              <a
-                href="https://letterlock.ingersoll.dev"
-                class="project-link project-link--primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Play</a>
-              <a
-                href="#"
-                class="project-link project-link--ghost"
-                aria-label="Source code (not yet available)"
-                aria-disabled="true"
-              >Code</a>
+              <a href="https://letterlock.ingersoll.dev" class="project-link project-link--primary" target="_blank"
+                rel="noopener noreferrer">Play</a>
+              <a href="#" class="project-link project-link--ghost" aria-label="Source code (not yet available)"
+                aria-disabled="true">Code</a>
             </div>
           </article>
 
@@ -195,24 +176,15 @@
               </ul>
             </div>
             <p class="project-card__desc">
-              Repeating countdown timers and a weekly task tracker built for daily personal use.
-              Schedule-aware: timers auto-pause and resume within a configurable work-hours window.
-              SVG progress rings, browser notifications, audio alerts, dark/light theme,
-              and full keyboard accessibility — no backend, no account.
+              A set of repeating countdown timers and a weekly task tracker built for my own daily routine. It supports
+              custom schedules, work-hour pauses, native SVG progress indicators, browser alerts, audio notifications,
+              themes, and keyboard controls. There is no backend, account system, or tracking.
             </p>
             <div class="project-card__links">
-              <a
-                href="https://timers.ingersoll.dev"
-                class="project-link project-link--primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Open app</a>
-              <a
-                href="https://github.com/tyleringersoll/daily-timers"
-                class="project-link project-link--ghost"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Code</a>
+              <a href="https://timers.ingersoll.dev" class="project-link project-link--primary" target="_blank"
+                rel="noopener noreferrer">Open app</a>
+              <a href="https://github.com/tyleringersoll/daily-timers" class="project-link project-link--ghost"
+                target="_blank" rel="noopener noreferrer">Code</a>
             </div>
           </article>
 
@@ -227,31 +199,19 @@
         <ul class="site-cards" role="list">
 
           <li>
-            <a
-              href="https://tyleringersoll.com"
-              class="site-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://tyleringersoll.com" class="site-card" target="_blank" rel="noopener noreferrer">
               <p class="site-card__domain">tyleringersoll.com</p>
               <p class="site-card__desc">
-                Frontend architecture deep-dives, full work history, performance
-                breakdowns, and a three-decade musical background.
+                My main site, with frontend engineering notes, architecture notes, resume history, and music background.
               </p>
             </a>
           </li>
 
           <li>
-            <a
-              href="https://tyleringersolldrums.com"
-              class="site-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://tyleringersolldrums.com" class="site-card" target="_blank" rel="noopener noreferrer">
               <p class="site-card__domain">tyleringersolldrums.com</p>
               <p class="site-card__desc">
-                Remote session work, hybrid acoustic-digital tracking configurations,
-                multi-decade performance credits, and current booking details.
+                My drumming site, with session information, studio details, video clips, and selected credits.
               </p>
             </a>
           </li>
@@ -260,7 +220,7 @@
             <div class="site-card site-card--current" aria-current="page">
               <p class="site-card__domain">ingersoll.dev</p>
               <p class="site-card__desc">
-                Native browser experiments, performance-focused builds, and zero-overhead frontend utilities.
+                Small frontend projects, browser experiments, and utilities.
               </p>
             </div>
           </li>
@@ -299,10 +259,10 @@
     (function () {
       const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
-      const mnav     = document.querySelector('.mnav');
-      const btn      = document.getElementById('mnav-btn');
-      const overlay  = document.getElementById('mnav-overlay');
-      const panel    = document.getElementById('mnav-panel');
+      const mnav = document.querySelector('.mnav');
+      const btn = document.getElementById('mnav-btn');
+      const overlay = document.getElementById('mnav-overlay');
+      const panel = document.getElementById('mnav-panel');
       const closeBtn = document.getElementById('mnav-close');
 
       let isOpen = false;
@@ -371,7 +331,7 @@
           return;
         }
         var first = items[0];
-        var last  = items[items.length - 1];
+        var last = items[items.length - 1];
         if (document.activeElement === panel) {
           e.preventDefault();
           (e.shiftKey ? last : first).focus();
@@ -399,4 +359,5 @@
   </script>
 
 </body>
+
 </html>

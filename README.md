@@ -1,6 +1,6 @@
 # ingersoll.dev
 
-Source for [ingersoll.dev](https://ingersoll.dev) — a directory of browser-native frontend experiments, performance-focused builds, and zero-overhead utilities by Tyler Ingersoll.
+Source for [ingersoll.dev](https://ingersoll.dev), a small directory of frontend projects and browser-based utilities by Tyler Ingersoll.
 
 ## Stack
 
@@ -29,5 +29,5 @@ Shares the color palette and typography of [tyleringersoll.com](https://tylering
 ## Related
 
 - [tyleringersoll.com](https://tyleringersoll.com) — frontend architecture, engineering resume, and music history
-- [tyleringersolldrums.com](https://tyleringersolldrums.com) — remote session work, hybrid tracking configurations, and performance credits
+- [tyleringersolldrums.com](https://tyleringersolldrums.com) — drumming background, studio details, videos, and session information
 - [letterlock.ingersoll.dev](https://letterlock.ingersoll.dev) — word game project
